@@ -1,0 +1,397 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f3ede4;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: #453737;
+}
+
+h2, h3, .logo {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+/*/ HEADER /*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fbf8f3;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.nav-list {
+    display: flex;
+    gap: 25px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #453737;
+    font-size: 0.95rem;
+}
+
+/*/ BOTONES TIPO PILL /*/
+.btn-pill {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #453737;
+    color: #fbf8f3;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #453737;
+    color: #453737;
+}
+
+.pill {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pill-chica {
+    background-color: #ffffff;
+    color: #a54771;
+    margin-bottom: 8px;
+}
+
+.flecha {
+    text-decoration: none;
+    color: #453737;
+    font-size: 1.1rem;
+}
+
+/*/ START /*/
+.start {
+    position: relative;
+    margin: 30px 40px;
+}
+
+.start-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 20px;
+    display: block;
+}
+
+.start-texto {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+.start-texto p {
+    margin: 0;
+}
+
+.start-card {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background-color: #fbf8f3;
+    padding: 18px 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 200px;
+}
+
+.start-card h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.start-card .flecha {
+    align-self: flex-end; /*/ lleva al final/*/
+}
+
+/*/ MISION /*/
+.mision {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: #8a7a6c;
+    margin: 0;
+}
+
+.mision-texto {
+    max-width: 480px;
+}
+
+.mision-texto p {
+    line-height: 1.6;
+}
+
+/*/ CATEGORIAS /*/
+.categorias {
+    padding: 0 40px 20px;
+}
+
+.categorias-grilla {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*/ divide en 4 column del mismo ancho/*/
+    gap: 20px;
+}
+
+.categoria-card {
+    height: 160px;
+    border-radius: 16px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fondo-1 { 
+    background-color: #e4d6e8; 
+    }
+.fondo-2 { 
+    background-color: #ded6c9; 
+    }
+.fondo-3 { 
+    background-color: #c9d2cf; 
+    }
+.fondo-4 { 
+    background-color: #e8ded1; 
+}
+
+/*/ SERVICIOS /*/
+.servicios {
+    padding: 20px 40px 40px;
+}
+
+.subtitulo {
+    color: #6f6058;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #d8cabb;
+    margin: 15px 0;
+}
+
+.servicios-grilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.servicios-card {
+    background-color: #fbf8f3;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-contenido {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.foto-equipo {
+    height: 160px;
+    width: 100%;
+}
+
+.dias {
+    color: #a54771;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.card-contenido h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.card-contenido p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    color: #6f6058;
+}
+
+.btn-reserva {
+    align-self: flex-start;
+    text-decoration: none;
+    color: #a54771;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #a54771;
+}
+
+/*/ FOOTER /*/
+footer {
+    background-color: #fbf8f3;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #453737;
+}
+
+.footer-ig {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #453737;
+}
+
+.contacto {
+    padding: 20px 40px 40px;
+}
+
+/*/ FORMULARIO CONTACTO /*/
+.contacto-grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+    padding: 20px 0;
+}
+
+.info-contacto {
+    background-color: #fbf8f3;
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.info-contacto p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.btn-whatsapp {
+    align-self: flex-start;
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: #fbf8f3;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.form-contacto label {
+    font-size: 0.85rem;
+    color: #6f6058;
+}
+
+.form-contacto input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #d8cabb;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    background-color: #fff;
+}
+
+.form-contacto input:focus {
+    outline: none;
+    border-color: #a54771;
+}
+
+.form-contacto button {
+    border: none;
+    margin-top: 6px;
+}
+
+.mapa {
+    width: 100%;
+    height: 320px;
+    border: 0;
+    border-radius: 16px;
+    margin-top: 25px;
+}
+
+/*/ PRODUCTOS /*/
+.precio-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.precio {
+    font-weight: 500;
+    color: #453737;
+}
+
+/*/ RESPONSIVE /*/
+@media (max-width: 800px) {
+    .categorias-grilla,
+    .servicios-grilla {
+        grid-template-columns: 1fr 1fr;
+    }
+    .start-texto {
+        font-size: 1.3rem;
+    }
+    .start-img {
+        height: 320px;
+    }
+    .start-card {
+        width: 160px;
+    }
+    .contacto-grilla {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+    .categorias-grilla,
+    .servicios-grilla {
+        grid-template-columns: 1fr;
+    }
+}
