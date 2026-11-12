@@ -69,12 +69,6 @@ header {
     letter-spacing: 0.5px;
 }
 
-.pill-chica {
-    background-color: #ffffff;
-    color: #a54771;
-    margin-bottom: 8px;
-}
-
 .flecha {
     text-decoration: none;
     color: #453737;
@@ -107,28 +101,6 @@ header {
 
 .start-texto p {
     margin: 0;
-}
-
-.start-card {
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-    background-color: #fbf8f3;
-    padding: 18px 20px;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    width: 200px;
-}
-
-.start-card h4 {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.start-card .flecha {
-    align-self: flex-end; /*/ lleva al final/*/
 }
 
 /*/ MISION /*/
@@ -428,9 +400,6 @@ footer {
     }
     .start-img { 
         height: 320px; 
-    }
-    .start-card { 
-        width: 160px; 
     }
     .contacto-grilla {
         grid-template-columns: 1fr;
