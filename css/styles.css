@@ -395,7 +395,7 @@ footer {
     .servicios-grilla {
         grid-template-columns: 1fr;
     }
-    .footer{
+    footer{
         flex-direction: column;
         gap: 20px;
     }
@@ -410,5 +410,10 @@ footer {
     }
     .mision, .categorias, .servicios, .contacto {
         padding: 20px;
+    }
+    .nav-list {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
     }
 }
