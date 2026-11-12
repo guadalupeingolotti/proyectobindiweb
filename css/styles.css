@@ -361,6 +361,26 @@ footer {
     color: #453737;
 }
 
+/*/ buscador /*/
+.buscador label {
+    font-size: 0.85rem;
+    color: #6f6058;
+}
+
+.buscador input {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #d8cabb;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    background-color: #fff;
+}
+
+.buscador input:focus {
+    outline: none;
+    border-color: #a54771;
+}
+
 /*/ menu hamburguesa /*/
 .btn-menu {
     display: none;
@@ -424,19 +444,13 @@ footer {
     .nav{
         display: none;
         width: 100%;
-    }
-    .nav.activo{
-        display: block;
-    }
-
-    .nav, .nav-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
         padding: 20px 0;
         background-color: #fbf8f3;
         border-radius: 12px;
         margin-top: 10px;
+    }
+    .nav.activo{
+        display: block;
     }
     .start { 
         margin: 20px; 
@@ -463,9 +477,6 @@ footer {
     }
     .label {
         font-size: 0.75rem;
-    }
-    .hero{
-        margin: 20px;
     }
     .mision, .categorias, .servicios, .contacto {
         padding: 20px;

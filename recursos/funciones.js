@@ -3,6 +3,7 @@ window.addEventListener('load', iniciar);
 function iniciar() {
     iniciarMenu();
     iniciarFormulario();
+    iniciarCatalogo();
 }
 
 
@@ -17,7 +18,7 @@ function iniciarMenu() {
 
     // callbak: user click button
     btnMenu.addEventListener('click', function () {
-        toggleMenu(btnMenu, menu);
+        toggleMenu(btnMenu, menu)
     });
 
 }
@@ -97,5 +98,87 @@ function enviarFormulario(event) {
 
     for (let j = 0; j < campos.length; j++) {
         campos[j].classList.remove('campo-error', 'campo-ok');
+    }
+}
+
+/*/ catalogo productos /*/
+let productos = [
+    { nombre: 'Sérum hidratante', descripcion: 'Ácido hialurónico para piel seca, uso diario mañana y noche.', precio: 8500, fondo: 'fondo-1' },
+    { nombre: 'Crema facial nutritiva', descripcion: 'Textura rica con manteca de karité, ideal para pieles secas y sensibles.', precio: 9200, fondo: 'fondo-2' },
+    { nombre: 'Limpiador facial suave', descripcion: 'Gel de limpieza sin sulfatos, apto para todo tipo de piel.', precio: 6800, fondo: 'fondo-3' },
+    { nombre: 'Protector solar FPS 50', descripcion: 'Fórmula liviana de rápida absorción, sin efecto blanco.', precio: 10500, fondo: 'fondo-4' },
+    { nombre: 'Contorno de ojos', descripcion: 'Reduce ojeras y líneas de expresión con uso constante.', precio: 7900, fondo: 'fondo-1' },
+    { nombre: 'Exfoliante corporal', descripcion: 'Sales marinas y coco, deja la piel suave e hidratada.', precio: 7200, fondo: 'fondo-2' }
+];
+
+function iniciarCatalogo() {
+    let contenedor = document.getElementById('lista-productos');
+    let buscador = document.getElementById('buscador');
+
+    if (!contenedor || !buscador) {
+        return;
+    }
+
+    mostrarProductos(productos);
+ 
+    buscador.addEventListener('input', filtrarProductos);
+ 
+    contenedor.addEventListener('click', evitarSalto);
+}
+ 
+function normalizar(texto) {
+    return texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+ 
+function filtrarProductos(evento) {
+    let busqueda = normalizar(evento.target.value.trim());
+    let coincidencias = [];
+    for (let i = 0; i < productos.length; i++) {
+        let texto = normalizar(productos[i].nombre + ' ' + productos[i].descripcion);
+ 
+        if (texto.indexOf(busqueda) !== -1) {
+            coincidencias.push(productos[i]);
+        }
+    }
+ 
+    mostrarProductos(coincidencias);
+}
+
+function mostrarProductos(lista) {
+    let contenedor = document.getElementById('lista-productos');
+    let estado = document.getElementById('resultado-busqueda');
+    let html = '';
+ 
+    for (let i = 0; i < lista.length; i++) {
+        html += crearTarjeta(lista[i]);
+    }
+ 
+    contenedor.innerHTML = html;
+ 
+    if (lista.length === 0) {
+        estado.textContent = 'No encontramos productos que coincidan con tu búsqueda.';
+    } else {
+        estado.textContent = 'Mostrando ' + lista.length + ' de ' + productos.length + ' productos.';
+    }
+}
+
+function crearTarjeta(producto) {
+    return '' +
+        '<article class="servicios-card">' +
+            '<div class="foto-equipo ' + producto.fondo + '"></div>' +
+            '<div class="card-contenido">' +
+                '<h3>' + producto.nombre + '</h3>' +
+                '<p>' + producto.descripcion + '</p>' +
+                '<div class="precio-carrito">' +
+                    '<span class="precio">$' + producto.precio.toLocaleString('es-AR') + '</span>' +
+                    '<a href="#" class="btn-reserva">Agregar</a>' +
+                '</div>' +
+            '</div>' +
+        '</article>';
+}
+ 
+function evitarSalto(evento) {
+    if (evento.target.classList.contains('btn-reserva')) {
+        evento.preventDefault();
     }
 }
