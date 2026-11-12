@@ -362,18 +362,18 @@ footer {
 }
 
 /*/ RESPONSIVE /*/
-@media (max-width: 800px) {
+@media (max-width: 720px) {
     .categorias-grilla,
     .servicios-grilla {
         grid-template-columns: 1fr 1fr;
     }
-    .start-texto {
-        font-size: 1.3rem;
+    .hero-texto{
+        font-size: 1.5rem;
     }
-    .start-img {
+    .hero-img {
         height: 320px;
     }
-    .start-card {
+    .hero-card {
         width: 160px;
     }
     .contacto-grilla {
@@ -381,9 +381,10 @@ footer {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     header {
         flex-wrap: wrap;
+        flex-direction: column;
         gap: 12px;
     }
     .logo {
@@ -393,5 +394,21 @@ footer {
     .categorias-grilla,
     .servicios-grilla {
         grid-template-columns: 1fr;
+    }
+    .footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+    body{
+        font-size: 0.9rem;
+    }
+    .label {
+        font-size: 0.75rem;
+    }
+    .hero{
+        margin: 20px;
+    }
+    .mision, .categorias, .servicios, .contacto {
+        padding: 20px;
     }
 }
