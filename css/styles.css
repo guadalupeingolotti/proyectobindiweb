@@ -367,14 +367,14 @@ footer {
     .servicios-grilla {
         grid-template-columns: 1fr 1fr;
     }
-    .hero-texto{
-        font-size: 1.5rem;
+    .start-texto { 
+        font-size: 1.5rem; 
     }
-    .hero-img {
-        height: 320px;
+    .start-img { 
+        height: 320px; 
     }
-    .hero-card {
-        width: 160px;
+    .start-card { 
+        width: 160px; 
     }
     .contacto-grilla {
         grid-template-columns: 1fr;
@@ -382,6 +382,9 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .start { 
+        margin: 20px; 
+    }
     header {
         flex-wrap: wrap;
         flex-direction: column;
